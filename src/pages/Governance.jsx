@@ -8,7 +8,7 @@ const Governance = () => {
       <Header title="Governance & Compliance Checker" />
       <div className="page-container">
         
-        <div className="flex gap-4 mb-6">
+        <div className="flex gap-4">
           <div className="glass-panel p-6 flex flex-col items-center justify-center gap-2" style={{ flex: 1 }}>
             <Shield size={32} color="#10b981" />
             <div className="text-xl" style={{ fontWeight: 600 }}>EU AI Act</div>
@@ -29,7 +29,7 @@ const Governance = () => {
           </div>
         </div>
 
-        <div className="grid-cols-2">
+        <div className="grid-cols-2" style={{ flex: 1 }}>
           {/* AI Act Checklist */}
           <div className="glass-panel p-6">
             <h3 className="mb-4 text-main flex items-center gap-2"><CheckSquare size={20} /> EU AI Act Compliance Checklist</h3>

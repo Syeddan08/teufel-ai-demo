@@ -18,7 +18,7 @@ const Dashboard = () => {
       <Header title="Business KPI Dashboard" />
       <div className="page-container">
         
-        <div className="grid-cols-4 mb-6">
+        <div className="grid-cols-4">
           <div className="glass-panel kpi-card">
             <div className="kpi-header">
               <span>R&D Efficiency Gain</span>
@@ -55,9 +55,9 @@ const Dashboard = () => {
 
         <div className="grid-cols-2">
           {/* Chart 1: ROI over time */}
-          <div className="glass-panel p-6">
+          <div className="glass-panel p-6" style={{ display: 'flex', flexDirection: 'column' }}>
             <h3 className="mb-4 text-main">Hardware DSP Dev Savings vs AI expenditure</h3>
-            <div style={{ height: 300, width: '100%', minHeight: 300 }}>
+            <div style={{ flex: 1, width: '100%', minHeight: 400 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={roiData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <defs>
@@ -82,9 +82,9 @@ const Dashboard = () => {
           </div>
 
           {/* Chart 2: Adoption by Department */}
-          <div className="glass-panel p-6">
+          <div className="glass-panel p-6" style={{ display: 'flex', flexDirection: 'column' }}>
             <h3 className="mb-4 text-main">AI Workload Distribution</h3>
-            <div style={{ height: 300, width: '100%', minHeight: 300 }}>
+            <div style={{ flex: 1, width: '100%', minHeight: 400 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={[
                   { name: 'DSP Firmware', calls: 4000 },

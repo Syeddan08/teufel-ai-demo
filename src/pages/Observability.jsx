@@ -25,7 +25,7 @@ const Observability = () => {
       <Header title="Observability & Telemetry" />
       <div className="page-container">
         
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center">
           <div className="flex gap-4">
             <div className="badge badge-success flex items-center gap-1"><Server size={14} /> Systems Operational</div>
             <div className="badge badge-warning flex items-center gap-1"><AlertTriangle size={14} /> 1 Warning (GPT-4o Audio Tuning Latency)</div>
@@ -33,11 +33,11 @@ const Observability = () => {
           <button className="btn btn-outline"><Filter size={16} /> Filter by Model</button>
         </div>
 
-        <div className="grid-cols-2 mb-6">
+        <div className="grid-cols-2" style={{ flex: 1 }}>
           {/* Latency Chart */}
-          <div className="glass-panel p-6">
+          <div className="glass-panel p-6" style={{ display: 'flex', flexDirection: 'column' }}>
             <h3 className="mb-4 text-main flex items-center gap-2" style={{ textTransform: 'uppercase' }}><Eye size={18} /> API Latency (ms) - Last 30 mins</h3>
-            <div style={{ height: 300 }}>
+            <div style={{ flex: 1, width: '100%', minHeight: 400 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={latencyData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
@@ -53,9 +53,9 @@ const Observability = () => {
           </div>
 
           {/* Error Rates */}
-          <div className="glass-panel p-6">
+          <div className="glass-panel p-6" style={{ display: 'flex', flexDirection: 'column' }}>
             <h3 className="mb-4 text-main flex items-center gap-2" style={{ textTransform: 'uppercase' }}><AlertTriangle size={18} /> Error Rates by Endpoint</h3>
-            <div style={{ height: 300 }}>
+            <div style={{ flex: 1, width: '100%', minHeight: 400 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={errorData} layout="vertical">
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" horizontal={false} />
@@ -70,7 +70,7 @@ const Observability = () => {
         </div>
 
         <div className="glass-panel" style={{ overflow: 'hidden' }}>
-          <div style={{ padding: '24px', borderBottom: '1px solid var(--panel-border)' }}>
+          <div style={{ padding: '32px', borderBottom: '1px solid var(--panel-border)' }}>
             <h3 className="text-main" style={{ textTransform: 'uppercase' }}>Recent System Logs</h3>
           </div>
           <table className="data-table" style={{ fontSize: '0.85rem' }}>

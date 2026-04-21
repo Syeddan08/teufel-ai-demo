@@ -17,11 +17,11 @@ const ModelEvaluation = () => {
       <Header title="AI Model Evaluation Metrics" />
       <div className="page-container">
         
-        <div className="grid-cols-2 mb-6">
-          <div className="glass-panel" style={{ padding: '24px' }}>
+        <div className="grid-cols-2" style={{ flex: 1 }}>
+          <div className="glass-panel" style={{ padding: '32px', display: 'flex', flexDirection: 'column' }}>
             <h3 className="mb-4 text-main">Capability Matrix</h3>
             <p className="text-muted text-sm mb-6">Radar evaluation comparing frontier models across key Teufel requirements (e.g. Audio Processing, Cost Efficiency).</p>
-            <div style={{ height: '350px' }}>
+            <div style={{ flex: 1, minHeight: 400 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={radarData}>
                   <PolarGrid stroke="rgba(255,255,255,0.1)" />
@@ -37,10 +37,11 @@ const ModelEvaluation = () => {
             </div>
           </div>
 
-          <div className="glass-panel" style={{ overflow: 'hidden' }}>
-            <div style={{ padding: '24px', borderBottom: '1px solid var(--panel-border)' }}>
+          <div className="glass-panel" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ padding: '32px', borderBottom: '1px solid var(--panel-border)' }}>
               <h3 className="text-main">Benchmark Comparison</h3>
             </div>
+            <div style={{ flex: 1, padding: '16px' }}>
             <table className="data-table">
               <thead>
                 <tr>
@@ -84,10 +85,11 @@ const ModelEvaluation = () => {
                 </tr>
               </tbody>
             </table>
+            </div>
           </div>
         </div>
 
-        <div className="glass-panel" style={{ padding: '24px' }}>
+        <div className="glass-panel" style={{ padding: '32px' }}>
             <h3 className="mb-4 text-main">Consultant Recommendation</h3>
             <p className="text-muted" style={{ lineHeight: 1.6 }}>
               For latency-sensitive internal applications (like code completion or simple chat), <strong>Llama 3 self-hosted</strong> provides the best cost-to-performance ratio. However, for specialized Teufel audio analysis applications, <strong>GPT-4o</strong> severely outperforms competitors with a 4.2% Word Error Rate (WER) and native multimodal processing. <strong>Claude 3.5 Sonnet</strong> is recommended as a strong fallback for complex reasoning tasks balancing cost and speed.
