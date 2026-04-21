@@ -88,7 +88,7 @@ const Governance = () => {
               </select>
             </div>
             
-            <button className="btn btn-outline mt-4" style={{ width: '100%' }}>Export Audit Report</button>
+            <button className="btn btn-outline mt-4" style={{ width: '100%' }} onClick={() => alert('Generating NIS2 & GDPR Compliance Data... \n\n[SUCCESS] Audit_Report_Teufel_2026.pdf downloaded.')}>Export Audit Report</button>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, BarChart, Bar } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, BarChart, Bar, Legend } from 'recharts';
 import { AlertTriangle, Server, Eye, Filter } from 'lucide-react';
 
 const Observability = () => {
@@ -30,7 +30,9 @@ const Observability = () => {
             <div className="badge badge-success flex items-center gap-1"><Server size={14} /> Systems Operational</div>
             <div className="badge badge-warning flex items-center gap-1"><AlertTriangle size={14} /> 1 Warning (GPT-4o Audio Tuning Latency)</div>
           </div>
-          <button className="btn btn-outline"><Filter size={16} /> Filter by Model</button>
+          <button className="btn btn-outline" onClick={() => alert('Filter model parameters invoked. In production, this opens the LLM routing threshold matrix.')}>
+            <Filter size={16} /> Filter by Model
+          </button>
         </div>
 
         <div className="grid-cols-2" style={{ flex: 1 }}>
@@ -44,9 +46,10 @@ const Observability = () => {
                   <XAxis dataKey="time" stroke="#9ca3af" fontSize={12} />
                   <YAxis stroke="#9ca3af" fontSize={12} />
                   <RechartsTooltip contentStyle={{ backgroundColor: '#14161c', borderColor: '#323741' }} />
-                  <Line type="monotone" dataKey="Llama3" stroke="#EB0000" strokeWidth={3} dot={{ r: 4 }} />
-                  <Line type="monotone" dataKey="GPT4o" stroke="#10b981" strokeWidth={2} dot={{ r: 4 }} />
-                  <Line type="monotone" dataKey="Claude" stroke="#3b82f6" strokeWidth={2} dot={{ r: 4 }} />
+                  <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: '14px', color: '#f9fafb' }} />
+                  <Line name="Llama 3 (Local)" type="monotone" dataKey="Llama3" stroke="#EB0000" strokeWidth={3} dot={{ r: 4 }} />
+                  <Line name="GPT-4o (Azure)" type="monotone" dataKey="GPT4o" stroke="#10b981" strokeWidth={2} dot={{ r: 4 }} />
+                  <Line name="Claude 3.5 Sonnet" type="monotone" dataKey="Claude" stroke="#3b82f6" strokeWidth={2} dot={{ r: 4 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>

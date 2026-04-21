@@ -1,16 +1,16 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, AreaChart, Area, Legend } from 'recharts';
 import Header from '../components/Header';
 import { TrendingUp, Headphones, Euro, Zap } from 'lucide-react';
 
 const Dashboard = () => {
   const roiData = [
-    { month: 'Jan', savings: 15000, cost: 5000 },
-    { month: 'Feb', savings: 32000, cost: 5500 },
-    { month: 'Mar', savings: 48000, cost: 6200 },
-    { month: 'Apr', savings: 74000, cost: 7800 },
-    { month: 'May', savings: 96000, cost: 9100 },
-    { month: 'Jun', savings: 134000, cost: 10500 },
+    { month: 'Jan 2026', savings: 15000, cost: 5000 },
+    { month: 'Feb 2026', savings: 32000, cost: 5500 },
+    { month: 'Mar 2026', savings: 48000, cost: 6200 },
+    { month: 'Apr 2026', savings: 74000, cost: 7800 },
+    { month: 'May 2026', savings: 96000, cost: 9100 },
+    { month: 'Jun 2026', savings: 134000, cost: 10500 },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Dashboard = () => {
           </div>
           <div className="glass-panel kpi-card">
             <div className="kpi-header">
-              <span>Active AI Engineers</span>
+              <span>Active AI Users</span>
               <Headphones size={18} />
             </div>
             <div className="kpi-value">284</div>
@@ -45,7 +45,7 @@ const Dashboard = () => {
           </div>
           <div className="glass-panel kpi-card">
             <div className="kpi-header">
-              <span>Cost per Eval Matrix</span>
+              <span>Cost Per Model Evaluation</span>
               <Euro size={18} />
             </div>
             <div className="kpi-value">€0.003</div>
@@ -72,10 +72,11 @@ const Dashboard = () => {
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
                   <XAxis dataKey="month" stroke="#9ca3af" fontSize={12} />
-                  <YAxis stroke="#9ca3af" fontSize={12} />
-                  <RechartsTooltip contentStyle={{ backgroundColor: '#14161c', borderColor: '#323741' }} />
-                  <Area type="monotone" dataKey="savings" stroke="#10b981" fillOpacity={1} fill="url(#colorSavings)" />
-                  <Area type="monotone" dataKey="cost" stroke="#EB0000" fillOpacity={1} fill="url(#colorCost)" />
+                  <YAxis stroke="#9ca3af" fontSize={12} tickFormatter={(value) => `€${value}`} />
+                  <RechartsTooltip contentStyle={{ backgroundColor: '#14161c', borderColor: '#323741' }} formatter={(value) => `€${value}`} />
+                  <Legend verticalAlign="top" height={36} wrapperStyle={{ fontSize: '14px', color: '#f9fafb' }} />
+                  <Area name="DSP Savings" type="monotone" dataKey="savings" stroke="#10b981" fillOpacity={1} fill="url(#colorSavings)" />
+                  <Area name="AI Expenditure" type="monotone" dataKey="cost" stroke="#EB0000" fillOpacity={1} fill="url(#colorCost)" />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
