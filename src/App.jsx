@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import ModelEvaluation from './pages/ModelEvaluation';
@@ -9,7 +9,7 @@ import Governance from './pages/Governance';
 
 function App() {
   return (
-    <Router basename="/teufel-ai-demo/">
+    <Router>
       <div className="app-container">
         <Sidebar />
         <Routes>
