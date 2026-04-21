@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Lobster&display=swap');
 
 :root {
   /* Teufel Brand Colors */
@@ -58,14 +58,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .teufel-logo {
-  font-family: var(--font-family);
-  font-weight: 800;
-  font-size: 26px;
-  letter-spacing: -1.5px;
-  color: #fff;
-  text-transform: uppercase;
+  font-family: 'Lobster', cursive;
+  font-size: 34px;
+  color: var(--primary);
   display: flex;
   align-items: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .teufel-logo-t {

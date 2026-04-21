@@ -14,8 +14,8 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <div className="teufel-logo" style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%' }}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Lautsprecher_Teufel_Logo.svg" alt="Teufel" style={{ height: '32px' }} />
+        <div className="teufel-logo">
+          Teufel
         </div>
       </div>
       <nav className="sidebar-nav">
