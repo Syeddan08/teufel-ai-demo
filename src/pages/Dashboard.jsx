@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import Header from '../components/Header';
-import { TrendingUp, Headphones, DollarSign, Zap } from 'lucide-react';
+import { TrendingUp, Headphones, Euro, Zap } from 'lucide-react';
 
 const Dashboard = () => {
   const roiData = [
@@ -22,7 +22,7 @@ const Dashboard = () => {
           <div className="glass-panel kpi-card">
             <div className="kpi-header">
               <span>R&D Efficiency Gain</span>
-              <DollarSign size={18} />
+              <Euro size={18} />
             </div>
             <div className="kpi-value">314%</div>
             <div className="kpi-trend positive"><TrendingUp size={14} /> +18.5% this month</div>
@@ -46,7 +46,7 @@ const Dashboard = () => {
           <div className="glass-panel kpi-card">
             <div className="kpi-header">
               <span>Cost per Eval Matrix</span>
-              <DollarSign size={18} />
+              <Euro size={18} />
             </div>
             <div className="kpi-value">€0.003</div>
             <div className="kpi-trend positive"><TrendingUp size={14} /> -15% cheaper</div>
