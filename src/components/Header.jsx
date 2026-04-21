@@ -10,10 +10,12 @@ const Header = ({ title }) => {
         <button className="text-muted"><Bell size={20} /></button>
         <button className="text-muted"><Settings size={20} /></button>
         <div className="user-profile ml-4">
-          <div className="avatar">SD</div>
+          <div className="avatar" style={{ overflow: 'hidden', padding: 0, background: 'transparent' }}>
+            <img src="/teufel-ai-demo/profile.jpg" alt="Syed Danish Hassan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <div className="text-sm">
-            <div style={{ fontWeight: 600 }}>Syed Dan</div>
-            <div className="text-muted" style={{ fontSize: '0.75rem' }}>AI Consultant</div>
+            <div style={{ fontWeight: 600 }}>Syed Danish Hassan</div>
+            <div className="text-muted" style={{ fontSize: '0.75rem' }}>Technical AI Inhouse Consultant</div>
           </div>
         </div>
       </div>
