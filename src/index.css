@@ -253,3 +253,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .gap-4 { gap: 16px; }
 .text-muted { color: var(--text-muted); }
 .text-sm { font-size: 0.875rem; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-container { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; flex-direction: row; align-items: center; justify-content: space-between; padding: 12px; border-right: none; border-bottom: 1px solid var(--panel-border); }
+  .sidebar-header { border: none; padding: 0; }
+  .sidebar-nav { flex-direction: row; padding: 0; overflow-x: auto; gap: 4px; }
+  .nav-item { padding: 8px; font-size: 0; } 
+  .nav-icon { margin-right: 0; }
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+  .top-header { display: none; }
+  .chat-window { height: auto; flex-direction: column; }
+  .page-container > div { flex-direction: column !important; }
+}

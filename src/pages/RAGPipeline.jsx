@@ -4,7 +4,11 @@ import { Send, Database, FileText, ArrowRight, BrainCircuit, ShieldCheck, Box } 
 
 const RAGPipeline = () => {
   const [messages, setMessages] = useState([
-    { role: 'ai', content: 'SYSTEM READY: Secure connection established to Teufel Product Database. You can query technical manuals or spec sheets (e.g. ULTIMA 40 Surround, ROCKSTER AIR 2).', context: null }
+    { role: 'ai', content: 'SYSTEM READY: Secure connection established to Teufel Product Database. You can query technical manuals or spec sheets (e.g. ULTIMA 40 Surround, ROCKSTER AIR 2).', context: null },
+    { role: 'user', content: 'What is the crossover frequency for the CONSONO 35 Mk3 system?', context: null },
+    { role: 'ai', content: 'The CONSONO 35 Mk3 operates efficiently with a crossover frequency of 150 Hz. The included subwoofer handles everything below that range for seamless deep bass up to 43 Hz.', context: [
+      { score: 0.94, source: 'CONSONO_35_Mk3_Manual.pdf', snippet: 'Satellite crossover frequency must be set to 150 Hz at the receiver.' }
+    ]}
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);

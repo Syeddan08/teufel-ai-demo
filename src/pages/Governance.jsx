@@ -22,7 +22,10 @@ const Governance = () => {
           <div className="glass-panel p-6 flex flex-col items-center justify-center gap-2" style={{ flex: 1 }}>
             <FileWarning size={32} color="#f59e0b" />
             <div className="text-xl" style={{ fontWeight: 600 }}>NIS2</div>
-            <div className="badge badge-warning">Audit Pending</div>
+            <div className="badge badge-warning mb-1">Audit Pending</div>
+            <div className="text-muted text-center" style={{ fontSize: '0.7rem', lineHeight: 1.3 }}>
+              Network & Info Security Directive.<br/>Requires supply chain risk mapping.
+            </div>
           </div>
         </div>
 
