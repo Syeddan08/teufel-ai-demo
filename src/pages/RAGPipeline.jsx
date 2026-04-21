@@ -184,6 +184,16 @@ const RAGPipeline = () => {
               <div className="text-muted text-sm mb-2" style={{ textTransform: 'uppercase', fontWeight: 600 }}>Total Documents Indexed</div>
               <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>38,401 <span className="text-sm text-muted">chunks</span></div>
             </div>
+
+            <hr style={{ borderColor: 'var(--panel-border)', margin: '24px 0' }} />
+
+            <h4 className="mb-4 text-main" style={{ textTransform: 'uppercase' }}>Indexed Source Material</h4>
+            <ul style={{ listStyle: 'none', gap: '12px', display: 'flex', flexDirection: 'column' }}>
+              <li className="flex items-center gap-2 text-sm text-muted"><FileText size={16} color="var(--primary)" /> ROCKSTER AIR 2 Specs (PDF)</li>
+              <li className="flex items-center gap-2 text-sm text-muted"><FileText size={16} color="var(--primary)" /> ULTIMA 40 Surround Alignments (Docs)</li>
+              <li className="flex items-center gap-2 text-sm text-muted"><FileText size={16} color="var(--primary)" /> MOTIV® GO 2 BT Profiles (Excel)</li>
+              <li className="flex items-center gap-2 text-sm text-muted"><FileText size={16} color="var(--primary)" /> CONSONO 35 Mk3 Legacy Manual</li>
+            </ul>
           </div>
         </div>
 

@@ -84,7 +84,7 @@ const Dashboard = () => {
 
           {/* Chart 2: Adoption by Department */}
           <div className="glass-panel p-6" style={{ display: 'flex', flexDirection: 'column' }}>
-            <h3 className="mb-4 text-main">AI Workload Distribution</h3>
+            <h3 className="mb-4 text-main">AI Workload Distribution (Queries / Month)</h3>
             <div style={{ flex: 1, width: '100%', minHeight: 400 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={[
