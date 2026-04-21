@@ -5,12 +5,12 @@ import { TrendingUp, Headphones, Euro, Zap } from 'lucide-react';
 
 const Dashboard = () => {
   const roiData = [
-    { month: 'Jan 2026', savings: 15000, cost: 5000 },
-    { month: 'Feb 2026', savings: 32000, cost: 5500 },
-    { month: 'Mar 2026', savings: 48000, cost: 6200 },
-    { month: 'Apr 2026', savings: 74000, cost: 7800 },
-    { month: 'May 2026', savings: 96000, cost: 9100 },
-    { month: 'Jun 2026', savings: 134000, cost: 10500 },
+    { month: 'Jan 2026', savings: 5000, cost: 2100 },
+    { month: 'Feb 2026', savings: 9000, cost: 2600 },
+    { month: 'Mar 2026', savings: 14000, cost: 3500 },
+    { month: 'Apr 2026', savings: 22000, cost: 4800 },
+    { month: 'May 2026', savings: 31000, cost: 6200 },
+    { month: 'Jun 2026', savings: 48000, cost: 8100 },
   ];
 
   return (

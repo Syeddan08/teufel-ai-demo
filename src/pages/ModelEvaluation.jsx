@@ -49,7 +49,7 @@ const ModelEvaluation = () => {
                   <th>Latency (p95)</th>
                   <th>Cost / 1M Tokens</th>
                   <th>Audio Acc. (WER)</th>
-                  <th>Status</th>
+                  <th style={{ whiteSpace: 'nowrap' }}>Status</th>
                 </tr>
               </thead>
               <tbody>
@@ -61,7 +61,7 @@ const ModelEvaluation = () => {
                   <td>540ms</td>
                   <td>$5.00</td>
                   <td><span className="badge badge-success">4.2%</span></td>
-                  <td><span className="badge badge-blue">Production</span></td>
+                  <td style={{ whiteSpace: 'nowrap' }}><span className="badge badge-blue">Production</span></td>
                 </tr>
                 <tr>
                   <td>
@@ -71,7 +71,7 @@ const ModelEvaluation = () => {
                   <td>320ms</td>
                   <td>$3.00</td>
                   <td><span className="badge badge-warning">8.5%</span></td>
-                  <td><span className="badge badge-success">Piloting</span></td>
+                  <td style={{ whiteSpace: 'nowrap' }}><span className="badge badge-success">Piloting</span></td>
                 </tr>
                 <tr>
                   <td>
@@ -80,8 +80,8 @@ const ModelEvaluation = () => {
                   </td>
                   <td>120ms</td>
                   <td>$0.40</td>
-                  <td><span className="badge badge-danger">15.1%</span></td>
-                  <td><span className="badge badge-warning">Evaluating</span></td>
+                  <td><span className="text-muted text-sm" style={{ fontStyle: 'italic' }}>N/A (Text Model)</span></td>
+                  <td style={{ whiteSpace: 'nowrap' }}><span className="badge badge-warning">Evaluating</span></td>
                 </tr>
               </tbody>
             </table>
