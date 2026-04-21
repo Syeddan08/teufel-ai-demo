@@ -57,9 +57,9 @@ const Dashboard = () => {
           {/* Chart 1: ROI over time */}
           <div className="glass-panel p-6">
             <h3 className="mb-4 text-main">Hardware DSP Dev Savings vs AI expenditure</h3>
-            <div style={{ height: 300 }}>
+            <div style={{ height: 300, width: '100%', minHeight: 300 }}>
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={roiData}>
+                <AreaChart data={roiData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="colorSavings" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#10b981" stopOpacity={0.8}/>
@@ -84,7 +84,7 @@ const Dashboard = () => {
           {/* Chart 2: Adoption by Department */}
           <div className="glass-panel p-6">
             <h3 className="mb-4 text-main">AI Workload Distribution</h3>
-            <div style={{ height: 300 }}>
+            <div style={{ height: 300, width: '100%', minHeight: 300 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={[
                   { name: 'DSP Firmware', calls: 4000 },
@@ -95,7 +95,7 @@ const Dashboard = () => {
                 ]} layout="vertical">
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" horizontal={false} />
                   <XAxis type="number" stroke="#9ca3af" fontSize={12} />
-                  <YAxis dataKey="name" type="category" stroke="#9ca3af" fontSize={12} width={100} />
+                  <YAxis dataKey="name" type="category" stroke="#9ca3af" fontSize={12} width={100} interval={0} />
                   <RechartsTooltip cursor={{fill: 'rgba(255,255,255,0.05)'}} contentStyle={{ backgroundColor: '#14161c', borderColor: '#323741' }} />
                   <Bar dataKey="calls" fill="#EB0000" radius={[0, 4, 4, 0]} />
                 </BarChart>
